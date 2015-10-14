@@ -1,0 +1,9 @@
+BUGS:
+
+	Fix the Nav Bar to our paper prototype
+	Make the map enlarge to full width and height
+
+
+TO DO LIST:
+
+	Remake the LOGO in photoshop maybe ?
