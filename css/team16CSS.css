@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, .container 
+{
+    height: 100%;
+}
+
+.container 
+{
+    display: table;
+    vertical-align: middle;
+}
+
+.vertical-center-row 
+{
+    display: table-cell;
+    vertical-align: middle;
+}
