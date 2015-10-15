@@ -63,6 +63,39 @@ app.controller('AppController', function ($scope)
 		}
     })
 	
+	$scope.$watch('marsiling', function()
+	{
+		if(!$scope.currentLocation.length && !$scope.destination.length)
+		{
+			$scope.currentLocation = $scope.marsiling ? '' : 'Marsiling'; 
+		}else
+		{
+			$scope.destination = $scope.marsiling ? '' : 'Marsiling';
+		}
+    })	
+	
+	$scope.$watch('dakota', function()
+	{
+		if(!$scope.currentLocation.length && !$scope.destination.length)
+		{
+			$scope.currentLocation = $scope.dakota ? '' : 'Dakota'; 
+		}else
+		{
+			$scope.destination = $scope.dakota ? '' : 'Dakota';
+		}
+    })
+	
+	$scope.$watch('tiongBahru', function()
+	{
+		if(!$scope.currentLocation.length && !$scope.destination.length)
+		{
+			$scope.currentLocation = $scope.tiongBahru ? '' : 'Tiong Bahru'; 
+		}else
+		{
+			$scope.destination = $scope.tiongBahru ? '' : 'Tiong Bahru';
+		}
+    })
+	
 	$scope.$watch('reset', function()
 	{
 		$scope.currentLocation = '';
