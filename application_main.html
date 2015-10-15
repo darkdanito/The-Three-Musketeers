@@ -20,7 +20,7 @@
             
 		<table style="width:100%">
             <tr>  
-                <td style="width:10%"><a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a></td>
+                <td style="width:1%"><a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a></td>
                 <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
                 <td style="width:10%">Current Location: </td>
 				<td style="width:20%">{{currentLocation}}</td>
@@ -33,14 +33,11 @@
           			<div class="box on" ng-show="reset" ng-animate="'box'"></div>
                 </td>
             </tr>
-		 </table>
+		</table>
 
-<!--
-		<table class="table table-bordered" style="width:100%">
--->
         <table class="table table-bordered" style="width:100%">
 
-            <tr>
+              <tr>	<!-----	First Row	----->
             	<td style="width:10%">East West Line</td>
                 <td style="width:10%">North South Line</td>
                 <td style="width:10%">North East Line</td>
@@ -50,8 +47,7 @@
                 <td>MRT / LRT MAP</td>
             </tr>
 
-
-            <tr>
+            <tr>	<!-----	Second Row	----->
               <td>
                   <button class="btn btn-lg btn-success" ng-click="boonLay = !boonLay">Boon Lay</button>
                   <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>
@@ -80,7 +76,7 @@
             </tr>
             
             
-            <tr>
+            <tr>	<!-----	Third Row	----->
             	<td>
                 	<button  class="btn btn-lg btn-success"ng-click="lakeside = !lakeside">Lakeside</button>
                   	<div class="box on" ng-show="lakeside" ng-animate="'box'"></div>
@@ -92,7 +88,7 @@
                 <td></td>
             </tr>
             
-			<tr>
+			<tr>	<!-----	Fourth Row	----->
             	<td>
                 	<button class="btn btn-lg btn-success" ng-click="chineseGarden = !chineseGarden">Chinese Garden</button>
                   	<div class="box on" ng-show="chineseGarden" ng-animate="'box'"></div> 
@@ -104,7 +100,7 @@
                 <td></td>
             </tr>
         
-            <tr>
+            <tr>	<!-----	Fifth Row	----->
             	<td>
                 	<button class="btn btn-lg btn-success" ng-click="tiongBahru = !tiongBahru">Tiong Bahru</button>
                   	<div class="box on" ng-show="tiongBahru" ng-animate="'box'"></div> 

@@ -10,3 +10,4 @@ TO DO LIST:
 	Highlight which input box the application currently is waiting (eg: current or destination)
 	Remake reset button into clicking the respective button to reset instead
 	Sort the MRT station by ascending order ?
+	Allow user to search the list of mrt trains
