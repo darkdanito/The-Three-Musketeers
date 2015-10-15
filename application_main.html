@@ -20,12 +20,14 @@
             
 		<table style="width:100%">
             <tr>  
-                <td style="width:10%"><a type="button" href="index.html" class="btn btn-lg glyphicon glyphicon-home"></a></td>
-                <td style="width:10%"><a class="navbar-brand" href="index.html">T-Planner</a></td>
-                <td style="width:20%">Current Location: </td>
+                <td style="width:10%"><a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a></td>
+                <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
+                <td style="width:10%">Current Location: </td>
 				<td style="width:20%">{{currentLocation}}</td>
-                <td style="width:20%">Destination: </td>
+                <td style="width:10%">Destination: </td>
                 <td style="width:20%">{{destination}}</td>
+                <td><button>Brief Instructions</button></td>
+                <td><button>Pictorial Guide</button></td>
                 <td>
                     <button ng-click="reset = !reset">Reset</button>
           			<div class="box on" ng-show="reset" ng-animate="'box'"></div>
@@ -74,7 +76,7 @@
                   <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>                  
               </td>
               <td></td>
-              <td rowspan="3"><img src="images/Full Map.jpg" width="50%" alt="Logo"></td>
+              <td rowspan="4"><img src="images/Full Map.jpg" width="60%" alt="Logo"></td>
             </tr>
             
             
