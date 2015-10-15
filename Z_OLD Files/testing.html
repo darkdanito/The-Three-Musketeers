@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+ 
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/team16CSS.css" rel="stylesheet">
+                
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/dropdown.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+
+        
+
+        
+		<title>Team 16: T-Planner</title>
+    </head>
+
+    <body ng-app="my-app" ng-controller="AppController">
+
+		<table class="table table-bordered" style="width:100%">
+            <tr>  
+                <td style="width:10%"><a type="button" href="index.html" class="btn btn-lg glyphicon glyphicon-home"></a></td>
+                <td style="width:10%"><a class="navbar-brand" href="index.html">T-Planner</a></td>
+                <td style="width:20%">Current Location: </td>
+				<td style="width:20%">{{currentLocation}}</td>
+                <td style="width:20%">Destination: </td>
+                <td style="width:20%">{{destination}}</td>
+            </tr>
+            
+            <tr>
+				<td></td>
+            </tr>
+            
+          
+            
+            
+            </table>
+            
+            <table>
+            
+            <tr>
+                <td>
+                	<button ng-click="reset = !reset">Reset</button>
+                    <div class="box on" ng-show="reset" ng-animate="'box'"></div>
+                </td>
+                
+                <td>
+					<button ng-click="boonLay = !boonLay">Boon Lay</button>
+                    <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>
+                </td>
+                
+                <td>
+                	<button ng-click="lakeside = !lakeside">Lakeside</button>
+                    <div class="box on" ng-show="lakeside" ng-animate="'box'"></div>
+                </td>
+                
+                <td>
+                	<button ng-click="chineseGarden = !chineseGarden">Chinese Garden</button>
+                    <div class="box on" ng-show="chineseGarden" ng-animate="'box'"></div>
+                </td>
+                
+                <td></td>
+                <td></td>
+            </tr>  
+            
+            <tr>
+            
+            </tr>
+            
+<!--    	<tr>
+                <td>
+        
+                
+                
+                
+                <button ng-click="toggle = !toggle">Testing</button>
+				<div class="box on" ng-show="destination" ng-animate="'box'"></div>
+                
+                </td>
+                
+                <td>
+                <div class="box on" ng-show="toggle" ng-animate="'box'"></div>
+                </td>
+                
+                
+                
+                <td>
+                    <button ng-click="toggle = !toggle">Testing</button>
+                    <div class="box on" ng-show="toggle" ng-animate="'box'"></div>
+                </td>
+                
+                <td>Value of Current Location: {{currentLocation}}</td>
+                <td>Value of Station: {{station}}</td>
+                <td>Value of Toggle: {{toggle}}</td>
+            </tr>
+            
+            <tr>
+                <td>After Testing</td>
+                <td></td>
+                <td></td>
+                <td>Value of Destination: {{destination}}</td>
+                <td></td>
+                <td></td>
+            </tr>-->
+            
+            
+        </table> 
+
+
+<!--
+				<td style="width:20%">{{toggleText}}</td>
+                
+                		<span ng-switch="currentLocation.length">
+                            <span ng-switch-when="0">{{station}}</span>
+                            <span ng-switch-default>two</span>
+                        </span>
+-->                
+
+
+<!--
+		<input type="text" ng-model= "current_Location" />
+        
+		<a class="btn btn-lg btn-primary" href="#navbar" role="button" ng-model= "current_Location" value="necro">View navbar docs »</a>                     
+-->		
+
+    </body>
+</html>

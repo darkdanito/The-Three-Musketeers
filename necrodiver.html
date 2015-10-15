@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="js/dropdown.js"></script>
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/team16CSS.css" rel="stylesheet">
+        
+		<title>Team 16: T-Planner</title>
+    </head>
+
+    <body ng-app="my-app" ng-controller="AppController">
+			
+            <div ng-click="doClick()"></div>
+            
+		<table style="width:100%">
+            <tr>  
+                <td style="width:10%"><a type="button" href="index.html" class="btn btn-lg glyphicon glyphicon-home"></a></td>
+                <td style="width:10%"><a class="navbar-brand" href="index.html">T-Planner</a></td>
+                <td style="width:20%">Current Location: </td>
+				<td style="width:20%">{{currentLocation}}</td>
+                <td style="width:20%">Destination: </td>
+                <td style="width:20%">{{destination}}</td>
+                <td>
+                    <button ng-click="reset = !reset">Reset</button>
+          			<div class="box on" ng-show="reset" ng-animate="'box'"></div>
+                </td>
+            </tr>
+		 </table>
+
+<!--
+		<table class="table table-bordered" style="width:100%">
+-->
+        <table class="table table-bordered" style="width:100%">
+
+            <tr>
+            	<td style="width:10%">East West Line</td>
+                <td style="width:10%">North South Line</td>
+                <td style="width:10%">North East Line</td>
+                <td style="width:10%">Circle Line</td>
+                <td style="width:10%">Downtown Line</td>
+                <td style="width:10%">LRT</td>
+                <td>MRT / LRT MAP</td>
+            </tr>
+
+
+            <tr>
+              <td>
+                  <button class="btn btn-lg btn-success" ng-click="boonLay = !boonLay">Boon Lay</button>
+                  <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>
+              </td>
+              
+              <td>
+                  <button class="btn btn-lg btn-danger" ng-click="boonLay = !boonLay">Boon Lay</button>
+                  <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>                  
+              </td>
+              
+              <td>
+                  
+              </td>
+              
+              <td>
+                  <button class="btn btn-lg btn-warning" ng-click="boonLay = !boonLay">Boon Lay</button>
+                  <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>                    
+              </td>
+              
+              <td>
+                  <button class="btn btn-lg btn-primary" ng-click="boonLay = !boonLay">Boon Lay</button>
+                  <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>                  
+              </td>
+              <td></td>
+              <td rowspan="3"><img src="images/Full Map.jpg" width="50%" alt="Logo"></td>
+            </tr>
+            
+            
+            <tr>
+            	<td>
+                	<button  class="btn btn-lg btn-success"ng-click="lakeside = !lakeside">Lakeside</button>
+                  	<div class="box on" ng-show="lakeside" ng-animate="'box'"></div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+			<tr>
+            	<td>
+                	<button class="btn btn-lg btn-success" ng-click="chineseGarden = !chineseGarden">Chinese Garden</button>
+                  	<div class="box on" ng-show="chineseGarden" ng-animate="'box'"></div> 
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        
+            <tr>
+            	<td>
+
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+         
+            <tr>
+            	<td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+               
+        </table>
+            
+            
+    </body>
+</html>

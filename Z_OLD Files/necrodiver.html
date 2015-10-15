@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8">
+        
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="js/dropdown.js"></script>
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/team16CSS.css" rel="stylesheet">
+        
+		<title>Team 16: T-Planner</title>
+    </head>
+
+    <body ng-app="my-app" ng-controller="AppController">
+			
+            <div ng-click="doClick()"></div>
+            
+		<table style="width:100%">
+            <tr>  
+                <td style="width:10%"><a type="button" href="index.html" class="btn btn-lg glyphicon glyphicon-home"></a></td>
+                <td style="width:10%"><a class="navbar-brand" href="index.html">T-Planner</a></td>
+                <td style="width:20%">Current Location: </td>
+				<td style="width:20%">{{currentLocation}}</td>
+                <td style="width:20%">Destination: </td>
+                <td style="width:20%">{{destination}}</td>
+                <td>
+                    <button ng-click="reset = !reset">Reset</button>
+          			<div class="box on" ng-show="reset" ng-animate="'box'"></div>
+                </td>
+            </tr>
+		 </table>
+
+        <table class="table table-bordered" style="width:100%">
+
+            <tr>
+            	<td style="width:10%">Joo Koon</td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%">Bukit Batok</td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+                <td style="width:10%"></td>
+            </tr>
+
+            
+            <tr>
+            	<td>Pioneer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            
+            <tr>
+              <td>
+                  
+              </td>
+              
+              <td style="width:10%">
+                  <button ng-click="boonLay = !boonLay">Boon Lay</button>
+                  <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>
+              </td>
+              
+              <td>
+                  <button ng-click="lakeside = !lakeside">Lakeside</button>
+                  <div class="box on" ng-show="lakeside" ng-animate="'box'"></div>
+              </td>
+              
+              <td>
+                  <button ng-click="chineseGarden = !chineseGarden">Chinese Garden</button>
+                  <div class="box on" ng-show="chineseGarden" ng-animate="'box'"></div>
+              </td>
+              
+              <td>Jurong East</td>
+              <td></td>
+            </tr>
+            
+            
+            <tr>
+            	<td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        
+        </table>
+            
+            
+    </body>
+</html>
