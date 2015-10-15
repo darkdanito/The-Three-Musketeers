@@ -1,9 +1,12 @@
 BUGS:
 
 	Fix the Nav Bar to our paper prototype
-	Make the map enlarge to full width and height
-
+	There are times need to click twice to update current / destination
 
 TO DO LIST:
 
 	Remake the LOGO in photoshop maybe ?
+	Enlarge MRT image onclick()
+	Highlight which input box the application currently is waiting (eg: current or destination)
+	Remake reset button into clicking the respective button to reset instead
+	Sort the MRT station by ascending order ?
