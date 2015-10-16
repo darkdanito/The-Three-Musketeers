@@ -1,7 +1,8 @@
 BUGS:
 
 	Fix the Nav Bar to our paper prototype
-	There are times need to click twice to update current / destination
+	There are times need to click twice to update current / destination\\
+	Prevent carousel from automatically switch image (default is liddat)
 
 TO DO LIST:
 
