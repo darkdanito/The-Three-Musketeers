@@ -17,7 +17,6 @@ app.controller('AppController', function ($scope)
 		{
 			$scope.destination = $scope.boonLay ? '' : 'Boon Lay';
 		}
-		
     })
 	
 	$scope.$watch('lakeside', function()

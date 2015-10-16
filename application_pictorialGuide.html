@@ -15,7 +15,6 @@
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="css/team16CSS.css" rel="stylesheet">
         
-        
 		<title>Team 16: T-Planner</title>
     </head>
 
@@ -29,9 +28,12 @@
 				<td style="width:20%">{{currentLocation}}</td>
                 <td style="width:10%">Destination: </td>
                 <td style="width:20%">{{destination}}</td>
-                <td><button>Brief Instructions</button></td>
-                <td><button>Pictorial Guide</button></td>
-                <td>
+                <td style="width:10%">
+                	
+                	<button ng-hide="!currentLocation.length && !destination.length">Brief Instructions</button>
+                </td>
+                <td style="width:10%"><button ng-hide="!currentLocation.length && !destination.length">Pictorial Guide</button></td>
+                <td style="width:9%">
                     <button ng-click="reset = !reset">Reset</button>
           			<div class="box on" ng-show="reset" ng-animate="'box'"></div>
                 </td>
@@ -40,7 +42,6 @@
 
 		<h3>Pictorial Guide</h3>
             
-        
 	<!-- Carousel
 	================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -59,10 +60,23 @@
           		<div class="container">
 
                     <table class="table table-bordered" style="width:100%">
+
+						<tr>  
+                            <td style="width:33%"></td>
+                            <td style="width:33%"></td>
+                            <td style="width:33%"></td>
+                        </tr>
+                        
+						<tr>  
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
                         <tr>  
-                            <td style="width:33%">Current Location</td>
-                            <td style="width:33%">Board the train at Line 5 when it arrives</td>
-                            <td style="width:33%">Alight at Bishan (NS17) 8 steops later</td>
+                            <td>Current Location</td>
+                            <td>Board the train at Line 5 when it arrives</td>
+                            <td>Alight at Bishan (NS17) 8 steops later</td>
                         </tr>
                     </table>
 
@@ -72,9 +86,12 @@
                       <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
                       <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
                     </div>
+                    
+                    <img class="first-slide" src="images/red.jpg" alt="First slide">
+                    
                     -->
 					
-                    <img class="first-slide" src="images/red.jpg" alt="First slide">
+                    
 				</div>
 			</div>
             
@@ -82,11 +99,25 @@
 			<div class="container">
             
                 <table class="table table-bordered" style="width:100%">
+
                     <tr>  
-                        <td style="width:33%">Proceed from the North South Line to the Circle Line by following the signs
+                        <td style="width:33%"><img src="images/station_Signs/Circle Line.jpg" height="100%" width="100%" alt="Logo"></td>
+                        <td style="width:33%"></td>
+                        <td style="width:33%"></td>
+                    </tr>
+
+                    <tr>  
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>  
+                        <td>Proceed from the North South Line to the Circle Line by following the signs
                         located in the station</td>
-                        <td style="width:33%">Reach Bishan (CC15)</td>
-                        <td style="width:33%">Board the train at Line 10 when it  arrives</td>
+                        <td>Reach Bishan (CC15)</td>
+                        <td>Board the train at Line 10 when it  arrives</td>
                     </tr>
                 </table>
 
@@ -96,9 +127,11 @@
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
                 </div>
+                
+                <img class="second-slide" src="images/green.jpg" alt="Second slide">
                 -->
                 
-				<img class="second-slide" src="images/green.jpg" alt="Second slide">
+				
 			</div>
 		</div>
         
@@ -107,10 +140,23 @@
 			<div class="container">
 
                 <table class="table table-bordered" style="width:100%">
+
                     <tr>  
-                        <td style="width:33%">Alight at Dakota (CC8) 7 stops later</td>
-                        <td style="width:33%">X</td>
-                        <td style="width:33%">X</td>
+                        <td style="width:33%"></td>
+                        <td style="width:33%"></td>
+                        <td style="width:33%"></td>
+                    </tr>
+                    
+                    <tr>  
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>  
+                        <td>Alight at Dakota (CC8) 7 stops later</td>
+                        <td>X</td>
+                        <td>X</td>
                     </tr>
                 </table>
 
@@ -120,9 +166,11 @@
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
                 </div>
+                
+                <img class="third-slide" src="images/blue.jpg" alt="Third slide">
                 -->
                 
-				<img class="third-slide" src="images/blue.jpg" alt="Third slide">
+				
 			</div>
         </div>
       </div>
