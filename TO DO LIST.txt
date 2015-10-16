@@ -12,3 +12,4 @@ TO DO LIST:
 	Remake reset button into clicking the respective button to reset instead
 	Sort the MRT station by ascending order ?
 	Allow user to search the list of mrt trains
+	Shift the 3 dots button downwards for carousel

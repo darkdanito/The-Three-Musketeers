@@ -29,10 +29,11 @@
                 <td style="width:10%">Destination: </td>
                 <td style="width:20%">{{destination}}</td>
                 <td style="width:10%">
-                	
                 	<button ng-hide="!currentLocation.length && !destination.length">Brief Instructions</button>
                 </td>
-                <td style="width:10%"><button ng-hide="!currentLocation.length && !destination.length">Pictorial Guide</button></td>
+                <td style="width:10%">
+                	<button ng-hide="!currentLocation.length && !destination.length">Pictorial Guide</button>
+                </td>
                 <td style="width:9%">
                     <button ng-click="reset = !reset">Reset</button>
           			<div class="box on" ng-show="reset" ng-animate="'box'"></div>
@@ -46,12 +47,19 @@
 	================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
-      	<ol class="carousel-indicators">
+<!--
+		<ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
 		</ol>
-      
+-->      
+		<ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+
       	<div class="carousel-inner" role="listbox">
         	<div class="item active">
                 <!--
@@ -88,10 +96,8 @@
                     </div>
                     
                     <img class="first-slide" src="images/red.jpg" alt="First slide">
-                    
                     -->
-					
-                    
+
 				</div>
 			</div>
             
@@ -112,7 +118,6 @@
                         <td></td>
                     </tr>
 
-
                     <tr>  
                         <td>Proceed from the North South Line to the Circle Line by following the signs
                         located in the station</td>
@@ -120,17 +125,6 @@
                         <td>Board the train at Line 10 when it  arrives</td>
                     </tr>
                 </table>
-
-                <!--            
-                <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                </div>
-                
-                <img class="second-slide" src="images/green.jpg" alt="Second slide">
-                -->
-                
 				
 			</div>
 		</div>
@@ -158,19 +152,9 @@
                         <td>X</td>
                         <td>X</td>
                     </tr>
+                    
                 </table>
 
-                <!--            
-                <div class="carousel-caption">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                </div>
-                
-                <img class="third-slide" src="images/blue.jpg" alt="Third slide">
-                -->
-                
-				
 			</div>
         </div>
       </div>
@@ -183,7 +167,8 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+
     </div><!-- /.carousel -->        
-        
+
     </body>
 </html>
