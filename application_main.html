@@ -27,14 +27,23 @@
 				<td style="width:20%">{{currentLocation}}</td>
                 <td style="width:10%">Destination: </td>
                 <td style="width:20%">{{destination}}</td>
-                <td>
-                	
-                	<button ng-hide="!currentLocation.length && !destination.length">Brief Instructions</button>
+                <td style="width:10%">
+                	<a type="button" ng-hide="!currentLocation.length && !destination.length" href="application_briefInstruction.html" class="btn btn-lg btn-info" >Brief Instructions</a>
+                </td>               
+<!--
+				<button ng-hide="!currentLocation.length && !destination.length">Brief Instructions</button>
+                <td style="width:10%"><button ng-hide="!currentLocation.length && !destination.length">Pictorial Guide</button></td>
+-->               
+                
+                <td style="width:10%">
+                	<a type="button" ng-hide="!currentLocation.length && !destination.length" href="application_pictorialGuide.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
                 </td>
-                <td><button ng-hide="!currentLocation.length && !destination.length">Pictorial Guide</button></td>
-                <td>
-                    <button ng-click="reset = !reset">Reset</button>
-          			<div class="box on" ng-show="reset" ng-animate="'box'"></div>
+                
+                <td style="width:9%">
+                    <button class="btn btn-lg btn-danger" ng-click="reset = !reset">Reset</button>	
+<!--
+					<div class="box on" ng-show="reset" ng-animate="'box'"></div>
+-->            
                 </td>
             </tr>
 		</table>
@@ -123,8 +132,13 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td><a class="navbar-brand" href="application_briefInstruction.html">Boon Lay Brief</a></td>
-                <td><a class="navbar-brand" href="application_pictorialGuide.html">Boon Lay Picture</a></td>
+                <td></td>
+                <td></td>
+<!--
+				<a class="navbar-brand" href="application_briefInstruction.html">Boon Lay Brief</a>
+				<a class="navbar-brand" href="application_pictorialGuide.html">Boon Lay Picture</a>
+-->                
+                
             </tr>
             
 			<tr>
