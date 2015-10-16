@@ -7,7 +7,8 @@ app.controller('AppController', function ($scope)
     $scope.toggle = true;
 	$scope.currentLocation = '';
 	$scope.destination = '';
-
+	
+	
 	$scope.$watch('boonLay', function()
 	{	
 		if(!$scope.currentLocation.length && !$scope.destination.length)
