@@ -28,7 +28,9 @@
                 <td style="width:10%">Destination: </td>
                 <td style="width:20%">{{destination}}</td>
                 <td style="width:10%">
-                	<a type="button" ng-hide="!currentLocation.length && !destination.length" href="application_briefInstruction.html" class="btn btn-lg btn-info" >Brief Instructions</a>
+                	<a type="button" ng-hide="!destination.length" href="application_briefInstruction.html" class="btn btn-lg btn-info" >Brief Instructions</a>
+                
+
                 </td>               
 <!--
 				<button ng-hide="!currentLocation.length && !destination.length">Brief Instructions</button>
@@ -36,7 +38,7 @@
 -->               
                 
                 <td style="width:10%">
-                	<a type="button" ng-hide="!currentLocation.length && !destination.length" href="application_pictorialGuide.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
+                	<a type="button" ng-hide="!destination.length" href="application_pictorialGuide.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
                 </td>
                 
                 <td style="width:9%">
