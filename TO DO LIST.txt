@@ -1,10 +1,12 @@
 BUGS:
 
-	Fix the Nav Bar to our paper prototype
+	Fix the Nav Bar to look like our paper prototype ?
 
 TO DO LIST:
 
-	Enlarge MRT image onclick()
+	Fix the small MRT / LRT map 
 	Highlight which input box the application currently is waiting (eg: current or destination)
 	Remake reset button into clicking the respective button to reset instead
 	Allow user to search the list of mrt trains
+	Need to implement brief instructions
+	Help / Guide for first time user
