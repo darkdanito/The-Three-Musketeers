@@ -1,7 +1,6 @@
 BUGS:
 
 	Fix the Nav Bar to our paper prototype
-	There are times need to click twice to update current / destination
 
 TO DO LIST:
 
