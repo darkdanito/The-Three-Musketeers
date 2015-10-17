@@ -20,7 +20,7 @@ app.controller('AppController', function ($scope)
 			$scope.rootCurrent = 'Boon Lay'; 
 		}else
 		{
-			$scope.destination = $scope.boonLay ? '' : 'Boon Lay';
+			$scope.destination = 'Boon Lay';
 			$scope.rootDestination = $scope.boonLay ? '' : 'Boon Lay';
 		}
     })
@@ -33,7 +33,7 @@ app.controller('AppController', function ($scope)
 			$scope.currentLocation = 'Lakeside';
 		}else
 		{
-			$scope.destination = $scope.lakeside ? '' : 'Lakeside';
+			$scope.destination = 'Lakeside';
 		}
     })
 	
@@ -45,7 +45,7 @@ app.controller('AppController', function ($scope)
 			$scope.currentLocation = 'Chinese Garden'; 
 		}else
 		{
-			$scope.destination = $scope.chineseGarden ? '' : 'Chinese Garden';
+			$scope.destination = 'Chinese Garden';
 		}
     })
 	
@@ -57,7 +57,7 @@ app.controller('AppController', function ($scope)
 			$scope.currentLocation = 'Marsiling'; 
 		}else
 		{
-			$scope.destination = $scope.marsiling ? '' : 'Marsiling';
+			$scope.destination = 'Marsiling';
 		}
     })	
 	
@@ -69,7 +69,7 @@ app.controller('AppController', function ($scope)
 			$scope.currentLocation = 'Dakota'; 
 		}else
 		{
-			$scope.destination = $scope.dakota ? '' : 'Dakota';
+			$scope.destination = 'Dakota';
 		}
     })
 	
@@ -81,7 +81,7 @@ app.controller('AppController', function ($scope)
 			$scope.currentLocation = 'Tiong Bahru';
 		}else
 		{
-			$scope.destination = $scope.tiongBahru ? '' : 'Tiong Bahru';
+			$scope.destination = 'Tiong Bahru';
 		}
     })
 	
@@ -93,7 +93,7 @@ app.controller('AppController', function ($scope)
 			$scope.currentLocation = 'One North'; 
 		}else
 		{
-			$scope.destination = $scope.oneNorth ? '' : 'One North';
+			$scope.destination = 'One North';
 		}
     })
 	
@@ -105,7 +105,7 @@ app.controller('AppController', function ($scope)
 			$scope.currentLocation = 'Bayfront';
 		}else
 		{
-			$scope.destination = $scope.bayfront ? '' : 'Bayfront';
+			$scope.destination = 'Bayfront';
 		}
     })
 	
@@ -115,11 +115,13 @@ app.controller('AppController', function ($scope)
 		$scope.destination = '';
     })
     
-    	$scope.showPopover = function () {
-	    $scope.popoverIsVisible = true;
+	$scope.showPopover = function () 
+	{
+		$scope.popoverIsVisible = true;
 	}
 
-	$scope.hidePopover = function () {
+	$scope.hidePopover = function () 
+	{
 	    $scope.popoverIsVisible = false;
 	}
 		
