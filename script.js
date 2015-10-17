@@ -8,20 +8,15 @@ app.controller('AppController', function ($scope)
 	$scope.currentLocation = '';
 	$scope.destination = '';
 
-	$scope.rootCurrent = '';
-	$scope.rootDestination = '';
-
 	$scope.$watch('boonLay', function()
 	{	
 		if(!$scope.currentLocation.length && !$scope.destination.length)
 		{
 //			$scope.currentLocation = $scope.boonLay ? '' : 'Boon Lay'; 
 			$scope.currentLocation = 'Boon Lay'; 
-			$scope.rootCurrent = 'Boon Lay'; 
 		}else
 		{
 			$scope.destination = 'Boon Lay';
-			$scope.rootDestination = $scope.boonLay ? '' : 'Boon Lay';
 		}
     })
 	
