@@ -24,28 +24,26 @@
                 <td style="width:1%"><a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a></td>
                 <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
                 <td style="width:10%">Current Location: </td>
-				<td style="width:20%">{{currentLocation}}</td>
+				<td style="width:18%">{{currentLocation}}</td>
                 <td style="width:10%">Destination: </td>
-                <td style="width:20%">{{destination}}</td>
-                <td style="width:10%">
+                <td style="width:18%">{{destination}}</td>
+                <td style="width:12%">
                 	<a type="button" ng-hide="!destination.length" href="application_briefInstruction.html" class="btn btn-lg btn-info" >Brief Instructions</a>
-                
-
-                </td>               
-<!--
-				<button ng-hide="!currentLocation.length && !destination.length">Brief Instructions</button>
-                <td style="width:10%"><button ng-hide="!currentLocation.length && !destination.length">Pictorial Guide</button></td>
--->               
-                
-                <td style="width:10%">
-                	<a type="button" ng-hide="!destination.length" href="application_pictorialGuide.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
+                </td>  
+                             	
+                <td style="width:12%">        	
+                    <!-----	Route for Marsiling to Dakota	----->
+                    <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
+                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
+                    </span>
+                    <!-----	Route for not supported ones	----->                 
+                	<span ng-show=" !(destination=='Dakota' && currentLocation=='Marsiling') ">
+                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_not_supported.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
+                    </span>                	
                 </td>
                 
-                <td style="width:9%">
+                <td style="width:5%">
                     <button class="btn btn-lg btn-danger" ng-click="reset = !reset">Reset</button>	
-<!--
-					<div class="box on" ng-show="reset" ng-animate="'box'"></div>
--->            
                 </td>
             </tr>
 		</table>
@@ -89,7 +87,6 @@
               <td></td>
               <td rowspan="4"><img src="images/Full Map.jpg" width="60%" alt="Logo"></td>
             </tr>
-            
             
             <tr>	<!-----	Third Row	----->
             	<td>
@@ -135,7 +132,24 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>
+                
+                
+
+                    <span ng-show="destination=='Dakota'">
+                           Valid Dakota
+                    </span>
+                    <span ng-show="destination=='Boon Lay'">
+                           Valid boon Lay
+                    </span> 
+                    <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
+                           Valid Dakota and Marsiling
+                    </span> 
+                
+                
+                
+                
+                </td>
 <!--
 				<a class="navbar-brand" href="application_briefInstruction.html">Boon Lay Brief</a>
 				<a class="navbar-brand" href="application_pictorialGuide.html">Boon Lay Picture</a>
