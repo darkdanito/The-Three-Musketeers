@@ -75,6 +75,28 @@ app.controller('AppController', function ($scope)
 		}
     })
 	
+	$scope.$watch('oneNorth', function()
+	{
+		if(!$scope.currentLocation.length && !$scope.destination.length)
+		{
+			$scope.currentLocation = $scope.oneNorth ? '' : 'One North'; 
+		}else
+		{
+			$scope.destination = $scope.oneNorth ? '' : 'One North';
+		}
+    })
+	
+	$scope.$watch('bayfront', function()
+	{
+		if(!$scope.currentLocation.length && !$scope.destination.length)
+		{
+			$scope.currentLocation = $scope.bayfront ? '' : 'Bayfront'; 
+		}else
+		{
+			$scope.destination = $scope.bayfront ? '' : 'Bayfront';
+		}
+    })
+	
 	$scope.$watch('reset', function()
 	{
 		$scope.currentLocation = '';
