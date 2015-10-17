@@ -21,3 +21,44 @@ html, body, .container
 {
 	top:105%;
 }
+
+green
+{
+    color:#088A29;
+    font-weight: bold;
+}
+
+red
+{
+    color:#B43104;
+    font-weight: bold;
+}
+
+purple
+{
+    color:#7401DF;
+    font-weight: bold;
+}
+
+orange
+{
+    color:#FE9A2E;
+    font-weight: bold;
+}
+
+blue
+{
+    color:#0040FF;
+    font-weight: bold;
+}
+
+grey
+{
+    color:#BDBDBD;
+    font-weight: bold;
+}
+
+current
+{
+    
+}
