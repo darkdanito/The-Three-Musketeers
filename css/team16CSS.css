@@ -63,3 +63,9 @@ current
    font-weight: bolder;
 }
 
+.popover {
+  
+  z-index: 100;
+  width: 67%;
+
+}
