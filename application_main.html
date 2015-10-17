@@ -96,7 +96,9 @@
                   <div class="box on" ng-show="bayfront" ng-animate="'box'"></div>                  
               </td>
               <td></td>
-              <td rowspan="4"><a ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" class=" thumbnail"><img src="images/Full Map.jpg"><img src="images/Full Map.jpg" style="margin-left: 15%;" class="popover" ng-show="popoverIsVisible" alt=" logo"></a></td>
+              <td rowspan="4"><a ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" class=" thumbnail">
+              <img src="images/Full Map.jpg" width="60%"><img src="images/Full Map.jpg" style="margin-left: 15%;" 
+              class="popover" ng-show="popoverIsVisible" alt=" logo"></a></td>
             </tr>
             
             <tr>	<!-----	Third Row	----->
@@ -147,23 +149,7 @@
                 <td>{{destination}}</td>
                 <td></td>
                 <td>
-<!--                    
-					<span ng-show="destination=='Dakota'">
-                           Valid Dakota
-                    </span>
-                    <span ng-show="destination=='Boon Lay'">
-                           Valid boon Lay
-                    </span> 
-                    <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
-                           Valid Dakota and Marsiling
-                    </span> 
--->    
-                </td>
-<!--
-				<a class="navbar-brand" href="application_briefInstruction.html">Boon Lay Brief</a>
-				<a class="navbar-brand" href="application_pictorialGuide.html">Boon Lay Picture</a>
--->                
-                
+                </td>       
             </tr>
             
 			<tr>
@@ -180,3 +166,18 @@
             
     </body>
 </html>
+
+<!--
+				<a class="navbar-brand" href="application_briefInstruction.html">Boon Lay Brief</a>
+				<a class="navbar-brand" href="application_pictorialGuide.html">Boon Lay Picture</a>
+
+					<span ng-show="destination=='Dakota'">
+                           Valid Dakota
+                    </span>
+                    <span ng-show="destination=='Boon Lay'">
+                           Valid boon Lay
+                    </span> 
+                    <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
+                           Valid Dakota and Marsiling
+                    </span> 
+--->
