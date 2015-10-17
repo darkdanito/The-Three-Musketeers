@@ -109,6 +109,16 @@ app.controller('AppController', function ($scope)
 		$scope.currentLocation = '';
 		$scope.destination = '';
     })
+	
+	$scope.$watch('resetCurrent', function()
+	{
+		$scope.currentLocation = '';
+    })
+	
+	$scope.$watch('resetDestination', function()
+	{
+		$scope.destination = '';
+    })	
     
 	$scope.showPopover = function () 
 	{
