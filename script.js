@@ -102,5 +102,13 @@ app.controller('AppController', function ($scope)
 		$scope.currentLocation = '';
 		$scope.destination = '';
     })
+    
+    	$scope.showPopover = function () {
+	    $scope.popoverIsVisible = true;
+	}
+
+	$scope.hidePopover = function () {
+	    $scope.popoverIsVisible = false;
+	}
 		
 })
