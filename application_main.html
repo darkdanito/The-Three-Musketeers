@@ -36,8 +36,12 @@
                     <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
                            <a type="button" ng-hide="!destination.length" href="application_pictorialGuide.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
                     </span>
+                    <!-----	Route for Boon Lay to One North	----->
+                    <span ng-show=" destination=='One North' &&  currentLocation=='Boon Lay' ">
+                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_Boon Lay.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
+                    </span>
                     <!-----	Route for not supported ones	----->                 
-                	<span ng-show=" !(destination=='Dakota' && currentLocation=='Marsiling') ">
+                	<span ng-show=" !(destination=='Dakota' && currentLocation=='Marsiling') && !(destination=='One North' && currentLocation=='Boon Lay')">
                            <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_not_supported.html" class="btn btn-lg btn-info" >Pictorial Guide</a>
                     </span>                	
                 </td>
