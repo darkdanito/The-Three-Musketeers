@@ -68,3 +68,10 @@ current
   z-index: 100;
   width: 67%;
 }
+
+highlight
+{
+    border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding-left: 100px;
+}

@@ -26,12 +26,14 @@
                 </td>
                 <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
                 <td style="width:10%">Current Location: </td>
-				<td style="width:18%">{{currentLocation}}</td>
+				<td style="width:18%" ng-hide="currentLocation == ''">{{currentLocation}}</td>
+				<td style="width:18%" ng-hide="currentLocation != ''"><highlight></highlight></td>
 				<td style="width:18%"><a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent";">
 			    <i class="glyphicon glyphicon-remove"></i>
 		        </a></td>                
                 <td style="width:10%">Destination: </td>
-                <td style="width:18%">{{destination}}</td>
+				<td style="width:18%" ng-hide="destination == ''">{{destination}}</td>
+				<td style="width:18%" ng-hide="destination != '' || currentLocation ==''"><highlight></highlight></td> 
 				<td style="width:18%"><a class="btn btn-primary" ng-click="resetDestination = !resetDestination";">
 			    <i class="glyphicon glyphicon-remove"></i>
 		        </a></td>                 
