@@ -19,7 +19,8 @@
     </head>
 
     <body ng-app="my-app" ng-controller="AppController">
-            
+
+<!--            
 		<table style="width:100%">
             <tr>  
                 <td style="width:1%">
@@ -42,7 +43,48 @@
                 </td>
             </tr>
 		</table>
+-->
 
+		<table style="width:100%">
+            <tr>  
+                <td style="width:1%">
+                	<a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a>
+                </td>
+                <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
+                <td style="width:10%">Current Location: </td>
+				<td style="width:18%">{{currentLocation}}</td>
+                <td style="width:10%">Destination: </td>
+                <td style="width:18%">{{destination}}</td>
+                <td style="width:12%">
+                	<a type="button" ng-hide="!destination.length" href="application_briefInstruction.html" 
+                    class="btn btn-lg btn-info">Brief Instructions</a>
+                </td>  
+                             	
+                <td style="width:12%">        	
+                    <!-----	Route for Marsiling to Dakota	----->
+                    <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
+                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide.html" 
+                           class="btn btn-lg btn-info">Pictorial Guide</a>
+                    </span>
+                    <!-----	Route for Boon Lay to One North	----->
+                    <span ng-show=" destination=='One North' &&  currentLocation=='Boon Lay' ">
+                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_Boon Lay.html" 
+                           class="btn btn-lg btn-info">Pictorial Guide</a>
+                    </span>
+                    <!-----	Route for not supported ones	----->                 
+                	<span ng-show=" !(destination=='Dakota' && currentLocation=='Marsiling') && 
+                    !(destination=='One North' && currentLocation=='Boon Lay')">
+                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_not_supported.html" 
+                           class="btn btn-lg btn-info">Pictorial Guide</a>
+                    </span>                	
+                </td>
+                
+                <td style="width:5%">
+                    <button class="btn btn-lg btn-danger" ng-click="reset = !reset">Reset</button>	
+                </td>
+            </tr>
+		</table>
+        
 		<h3>Pictorial Guide: Marsiling to Dakota</h3>
             
 	<!-- Carousel
