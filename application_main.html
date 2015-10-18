@@ -26,7 +26,15 @@
                 	<a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a>
                 </td>
                 <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
-                <td style="width:10%">Current Location: </td>
+                <td style="width:10%">
+                    <span ng-show="currentLocation==''">
+						<button class="btn btn-lg btn-whiteRed" ng-click="reset = !reset">Current Location: </button>	
+                    </span>
+                    
+                    <span ng-show="currentLocation!=''">
+						<button class="btn btn-lg btn-white" ng-click="reset = !reset">Current Location: </button>	
+                    </span>
+                </td>
                 <td style="width:18%">{{currentLocation}}</td>
 <!--
 				<td style="width:18%" ng-hide="currentLocation == ''">{{currentLocation}}</td>
@@ -37,7 +45,19 @@
 		        </a>
 -->					
                 </td>                
-                <td style="width:10%">Destination: </td>
+                <td style="width:10%"> 
+                    <span ng-show="destination=='' && currentLocation!=''">
+						<button class="btn btn-lg btn-whiteRed" ng-click="reset = !reset">Destination: </button>	
+                    </span>
+                    
+                    <span ng-show="destination=='' && currentLocation==''"">
+						<button class="btn btn-lg btn-white" ng-click="reset = !reset">Destination: </button>	
+                    </span>   
+                    
+                    <span ng-show="destination!='' && currentLocation!=''"">
+						<button class="btn btn-lg btn-white" ng-click="reset = !reset">Destination: </button>	
+                    </span>              
+                </td>
                 <td style="width:18%">{{destination}}</td>
 <!--
 				<td style="width:18%" ng-hide="destination == ''">{{destination}}</td>
