@@ -7,7 +7,7 @@ app.controller('AppController', function ($scope)
     $scope.toggle = true;
 	$scope.currentLocation = '';
 	$scope.destination = '';
-	
+	$scope.counter = 0;
 	$scope.$watch('boonLay', function()
 	{	
 		if(!$scope.currentLocation.length && !$scope.destination.length)
@@ -120,14 +120,15 @@ app.controller('AppController', function ($scope)
 		$scope.destination = '';
     })	
     
-	$scope.showPopover = function () 
-	{
-		$scope.popoverIsVisible = true;
-	}
-
-	$scope.hidePopover = function () 
-	{
-	    $scope.popoverIsVisible = false;
+	$scope.enlarge = function () {
+	    $scope.counter += 1;
+	    if ($scope.counter == 1) {
+	        $scope.images = ['images/Full Map.jpg'];
+	    } else {
+	        $scope.images = [''];
+	        $scope.counter = 0;
+	    }
+	    
 	}
 		
 })

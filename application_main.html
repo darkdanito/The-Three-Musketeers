@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head lang="en">
         <meta charset="utf-8">
@@ -18,7 +18,7 @@
     </head>
 
     <body ng-app="my-app" ng-controller="AppController">
-            
+        
 		<!--	Nav Bar	-->            
 		<table style="width:100%">
             <tr>  
@@ -116,13 +116,15 @@
                 </td>
             </tr>
 		</table>
-
+        <div ng-repeat='image in images'>
+            <img ng-src="{{image}}" style="z-index: 100; position: absolute; width: 60%; margin-left:15%; " />
+        </div>
 		</br>
         </br>
         </br>
         </br>
         </br>
-
+        
         <table class="table table-bordered" style="width:100%">
 
               <tr>	<!-----	First Row	----->
@@ -160,9 +162,8 @@
                   <div class="box on" ng-show="bayfront" ng-animate="'box'"></div>                  
               </td>
               <td></td>
-              <td rowspan="10"><a ng-mouseover="showPopover()" ng-mouseleave="hidePopover()" class="thumbnail">
-              <img src="images/Full Map.jpg" width="100%"><img src="images/Full Map.jpg" style="margin-left: 15%;" 
-              class="popover" ng-show="popoverIsVisible" alt=" logo" ></a></td>
+              <td rowspan="10"><a class="thumbnail"><img src="images/Full Map.jpg" ng-click="enlarge()" alt="logo"></a>
+                  </td>
             </tr>
             
             <tr>	<!-----	Third Row	----->
