@@ -119,9 +119,21 @@
         <div ng-repeat='image in images'>
             <img ng-src="{{image}}" style="z-index: 100; position: absolute; width: 60%; margin-left:15%; " />
         </div>
-		</br>
+        
         </br>
-        </br>
+        
+        <span ng-show="currentLocation==''">
+            <h3>Please choose your current location from the list of stations below: </h3>	
+        </span>
+        
+        <span ng-show="(currentLocation!='') && (destination =='')">
+            <h3>Please choose your destination from the list of stations below: </h3>		
+        </span>
+        
+        <span ng-show="(currentLocation!='') && (destination !='')">
+            <h3>Please choose either Brief instructions or Pictorial Guide to proceed further </h3>		
+        </span>
+
         </br>
         </br>
         
