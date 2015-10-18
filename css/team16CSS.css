@@ -54,24 +54,27 @@ blue
 
 grey
 {
-    color:#BDBDBD;
-    font-weight: bold;
+	color:#BDBDBD;
+	font-weight: bold;
 }
 
 current
 {
-   font-weight: bolder;
+	font-weight: bolder;
 }
 
 .popover 
 {
-  z-index: 100;
-  width: 67%;
+	z-index: 100;
+/*
+	width: 67%;
+*/
+	width: 60%;
 }
 
 highlight
 {
-    border-radius: 25px;
+	border-radius: 25px;
     border: 2px solid #8AC007;
     padding-left: 100px;
 }
