@@ -19,30 +19,6 @@
     </head>
 
     <body ng-app="my-app" ng-controller="AppController">
-<!--           
-		<table style="width:100%">
-            <tr>  
-                <td style="width:1%">
-                	<a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a>
-                </td>
-                <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
-                <td style="width:10%">Current Location: </td>
-				<td style="width:20%">{{currentLocation}}</td>
-                <td style="width:10%">Destination: </td>
-                <td style="width:20%">{{destination}}</td>
-                <td style="width:10%">
-                	<button ng-hide="!currentLocation.length && !destination.length">Brief Instructions</button>
-                </td>
-                <td style="width:10%">
-                	<button ng-hide="!currentLocation.length && !destination.length">Pictorial Guide</button>
-                </td>
-                <td style="width:9%">
-                    <button ng-click="reset = !reset">Reset</button>
-          			<div class="box on" ng-show="reset" ng-animate="'box'"></div>
-                </td>
-            </tr>
-		</table>
--->
 
 		<table style="width:100%">
             <tr>  
@@ -88,9 +64,6 @@
             
 	<!-- Carousel
 	================================================== -->
-<!--
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
--->
     <div id="myCarousel" class="carousel" data-ride="carousel" data-interval="false">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -120,16 +93,14 @@
                             </td>
                         </tr>
                         
-						<tr>  
-                            <td></td>
-                            <td></td>
-                            <td></td>
+						<tr >  
+                            <td colspan="3"></td>
                         </tr>
                         
                         <tr>  
-                            <td><current>Current Location</current></td>
+                            <td>Current Location</td>
                             <td>Board the train at <green>Line 1</green> when it arrives</td>
-                            <td>Alight at <green>Buona Vista (EW21)</green> 6 stops later</td>
+                            <td>Alight at <green>Buona Vista (EW21)</green> <b>6</b> stops later</td>
                         </tr>
                     </table>
 
@@ -148,9 +119,7 @@
                     </tr>
 
                     <tr>  
-                        <td></td>
-                        <td></td>
-                        <td></td>
+						<td colspan="3"></td>
                     </tr>
 
                     <tr>  
@@ -177,15 +146,13 @@
                     </tr>
                     
                     <tr>  
-                        <td></td>
-                        <td></td>
-                        <td></td>
+						<td colspan="3"></td>
                     </tr>
 
                     <tr>  
-                        <td>Alight at <orange>One-North (CC23)</orange> 1 stop later</td>
-                        <td>X</td>
-                        <td>X</td>
+                        <td>Alight at <orange>One-North (CC23)</orange> <b>1</b> stop later</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     
                 </table>

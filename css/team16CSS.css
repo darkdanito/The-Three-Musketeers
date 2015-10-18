@@ -58,11 +58,6 @@ grey
 	font-weight: bold;
 }
 
-current
-{
-	font-weight: bolder;
-}
-
 .popover 
 {
 	z-index: 100;
