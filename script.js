@@ -13,10 +13,18 @@ app.controller('AppController', function ($scope)
 		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.boonLay ? '' : 'Boon Lay'; 
-			$scope.currentLocation = 'Boon Lay'; 
+			$scope.currentLocation = 'Boon Lay';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			 
 		}else
 		{
 			$scope.destination = 'Boon Lay';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}			
 		}
     })
 	
@@ -26,9 +34,17 @@ app.controller('AppController', function ($scope)
 		{
 //			$scope.currentLocation = $scope.lakeside ? '' : 'Lakeside'; 
 			$scope.currentLocation = 'Lakeside';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			
 		}else
 		{
 			$scope.destination = 'Lakeside';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}			
 		}
     })
 	
@@ -37,10 +53,18 @@ app.controller('AppController', function ($scope)
 		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.chineseGarden ? '' : 'Chinese Garden'; 
-			$scope.currentLocation = 'Chinese Garden'; 
+			$scope.currentLocation = 'Chinese Garden';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			 
 		}else
 		{
 			$scope.destination = 'Chinese Garden';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}			
 		}
     })
 	
@@ -49,10 +73,18 @@ app.controller('AppController', function ($scope)
 		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.marsiling ? '' : 'Marsiling'; 
-			$scope.currentLocation = 'Marsiling'; 
+			$scope.currentLocation = 'Marsiling';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			 
 		}else
 		{
 			$scope.destination = 'Marsiling';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}			
 		}
     })	
 	
@@ -61,10 +93,18 @@ app.controller('AppController', function ($scope)
 		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.dakota ? '' : 'Dakota'; 
-			$scope.currentLocation = 'Dakota'; 
+			$scope.currentLocation = 'Dakota';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			 
 		}else
 		{
 			$scope.destination = 'Dakota';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}			
 		}
     })
 	
@@ -74,9 +114,21 @@ app.controller('AppController', function ($scope)
 		{
 //			$scope.currentLocation = $scope.tiongBahru ? '' : 'Tiong Bahru'; 
 			$scope.currentLocation = 'Tiong Bahru';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			
 		}else
 		{
 			$scope.destination = 'Tiong Bahru';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}				
+			} 			
 		}
     })
 	
@@ -85,10 +137,22 @@ app.controller('AppController', function ($scope)
 		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.oneNorth ? '' : 'One North'; 
-			$scope.currentLocation = 'One North'; 
+			$scope.currentLocation = 'One North';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 
 		}else
 		{
 			$scope.destination = 'One North';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}				
+			} 			
 		}
     })
 	
@@ -98,9 +162,17 @@ app.controller('AppController', function ($scope)
 		{
 //			$scope.currentLocation = $scope.bayfront ? '' : 'Bayfront'; 
 			$scope.currentLocation = 'Bayfront';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			
 		}else
 		{
 			$scope.destination = 'Bayfront';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}			
 		}
     })
 	
