@@ -19,319 +19,334 @@
 
     <body ng-app="my-app" ng-controller="AppController">
         
-		<!--	Nav Bar	-->            
-		<table style="width:100%">
-            <tr>  
-                <td style="width:1%">
-                	<a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a>
-                </td>
-                
-                <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
-                
-                <td style="width:10%">
-                    <span ng-show="currentLocation==''">
-						<button class="btn btn-lg btn-whiteRed" ng-click="reset = !reset">Current Location: </button>	
-                    </span>
-                    
-                    <span ng-show="currentLocation!=''">
-						<button class="btn btn-lg btn-white" ng-click="reset = !reset">Current Location: </button>	
-                    </span>
-                </td>
-                
-                <td style="width:15%">
-                	{{currentLocation}}
-                </td>
-                
-                <td style="width:1%"><a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent">
-                <i class="glyphicon glyphicon-remove"></i>
-		        </a>                
-<!--
-				<td style="width:18%" ng-hide="currentLocation == ''">{{currentLocation}}</td>
-				
-                <td style="width:18%" ng-hide="currentLocation != ''"><highlight></highlight></td>				
-                <td style="width:18%"><a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent";">
-                <i class="glyphicon glyphicon-remove"></i>
-		        </a>
--->					
-                </td>
-                                
-                <td style="width:10%"> 
-                    <span ng-show="destination=='' && currentLocation!=''">
-						<button class="btn btn-lg btn-whiteRed" ng-click="reset = !reset">Destination: </button>	
-                    </span>
-                    
-                    <span ng-show="destination=='' && currentLocation==''"">
-						<button class="btn btn-lg btn-white" ng-click="reset = !reset">Destination: </button>	
-                    </span>   
-                    
-                    <span ng-show="destination!='' && currentLocation!=''"">
-						<button class="btn btn-lg btn-white" ng-click="reset = !reset">Destination: </button>	
-                    </span>              
-                </td>
-                
-                <td style="width:15%">
-                {{destination}}
-                </td>
-                
-                <td style="width:1%"><a class="btn btn-primary" ng-click="resetDestination = !resetDestination">
-			    <i class="glyphicon glyphicon-remove"></i>
-		        </a>
-<!--
-				<td style="width:18%" ng-hide="destination == ''">{{destination}}</td>
-				<td style="width:18%" ng-hide="destination != '' || currentLocation ==''"><highlight></highlight></td> 
-				<td style="width:18%"><a class="btn btn-primary" ng-click="resetDestination = !resetDestination";">
-			    <i class="glyphicon glyphicon-remove"></i>
-		        </a>
--->                
-                </td>    
-                             
-                <td style="width:10%">
-<!--                	
-                    <a type="button" ng-hide="!destination.length" href="application_briefInstruction.html" 
-                    class="btn btn-lg btn-info">Brief Instructions</a>
--->                    
-                    <!-----	Route for Marsiling to Dakota	----->
-                    <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
-                           <a type="button" ng-hide="!destination.length" href="application_briefInstruction.html" 
-                           class="btn btn-lg btn-info">Brief Instructions</a>
-                    </span>
-                    <!-----	Route for Boon Lay to One North	----->
-                    <span ng-show=" destination=='One North' &&  currentLocation=='Boon Lay' ">
-                           <a type="button" ng-hide="!destination.length" href="application_briefInstruction_Boon Lay.html" 
-                           class="btn btn-lg btn-info">Brief Instructions</a>
-                    </span>
-                    <!-----	Route for not supported ones	----->                 
-                	<span ng-show=" !(destination=='Dakota' && currentLocation=='Marsiling') && 
+		<!--	Nav Bar	-->   
+        <div class="navbar navbar-fixed-top">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:1%">
+                        <a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a>
+                    </td>
+
+                    <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
+
+                    <td style="width:10%">
+                        <span ng-show="currentLocation==''">
+                            <button class="btn btn-lg btn-whiteRed" ng-click="reset = !reset">Current Location: </button>
+                        </span>
+
+                        <span ng-show="currentLocation!=''">
+                            <button class="btn btn-lg btn-white" ng-click="reset = !reset">Current Location: </button>
+                        </span>
+                    </td>
+
+                    <td style="width:10%">
+                        {{currentLocation}}
+                    </td>
+
+                    <td style="width:1%">
+                        <a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                        <!--
+                                    <td style="width:18%" ng-hide="currentLocation == ''">{{currentLocation}}</td>
+
+                                    <td style="width:18%" ng-hide="currentLocation != ''"><highlight></highlight></td>
+                                    <td style="width:18%"><a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent";">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                    </a>
+                    -->
+                    </td>
+
+                    <td style="width:10%">
+                        <span ng-show="destination=='' && currentLocation!=''">
+                            <button class="btn btn-lg btn-whiteRed" ng-click="reset = !reset">Destination: </button>
+                        </span>
+
+                        <span ng-show="destination=='' && currentLocation==''" ">
+						<button class=" btn btn-lg btn-white" ng-click="reset = !reset">
+                            Destination: </button>
+                        </span>
+
+                        <span ng-show="destination!='' && currentLocation!=''" ">
+						<button class=" btn btn-lg btn-white" ng-click="reset = !reset">
+                            Destination: </button>
+                        </span>
+                    </td>
+
+                    <td style="width:10%">
+                        {{destination}}
+                    </td>
+
+                    <td style="width:1%">
+                        <a class="btn btn-primary" ng-click="resetDestination = !resetDestination">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                        <!--
+                                    <td style="width:18%" ng-hide="destination == ''">{{destination}}</td>
+                                    <td style="width:18%" ng-hide="destination != '' || currentLocation ==''"><highlight></highlight></td>
+                                    <td style="width:18%"><a class="btn btn-primary" ng-click="resetDestination = !resetDestination";">
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                    </a>
+                    -->
+                    </td>
+
+                    <td style="width:10%; position: fixed; margin-left:20px; margin-top: 5px;">
+                        <!--
+                                        <a type="button" ng-hide="!destination.length" href="application_briefInstruction.html"
+                                        class="btn btn-lg btn-info">Brief Instructions</a>
+                    -->
+                        <!-----	Route for Marsiling to Dakota	----->
+                        <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
+                            <a type="button" ng-hide="!destination.length" href="application_briefInstruction.html"
+                               class="btn btn-lg btn-info">Brief Instructions</a>
+                        </span>
+                        <!-----	Route for Boon Lay to One North	----->
+                        <span ng-show=" destination=='One North' &&  currentLocation=='Boon Lay' ">
+                            <a type="button" ng-hide="!destination.length" href="application_briefInstruction_Boon Lay.html"
+                               class="btn btn-lg btn-info">Brief Instructions</a>
+                        </span>
+                        <!-----	Route for not supported ones	----->
+                        <span ng-show=" !(destination=='Dakota' && currentLocation=='Marsiling') &&
                     !(destination=='One North' && currentLocation=='Boon Lay')">
-                           <a type="button" ng-hide="!destination.length" href="application_briefInstruction_not_supported.html" 
-                           class="btn btn-lg btn-info">Brief Instructions</a>
-                    </span>                	
-					
-                	<span ng-show=" (destination=='' && currentLocation=='') ">
-                           <a type="button" href="application_pictorialGuide_not_supported.html" 
-                           class="btn btn-lg btn-white">Brief Instructions</a>
-                    </span>      
-                    
-                </td>  
-                             	
-                <td style="width:10%">        	
-                    <!-----	Route for Marsiling to Dakota	----->
-                    <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
-                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide.html" 
-                           class="btn btn-lg btn-info">Pictorial Guide</a>
-                    </span>
-                    <!-----	Route for Boon Lay to One North	----->
-                    <span ng-show=" destination=='One North' &&  currentLocation=='Boon Lay' ">
-                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_Boon Lay.html" 
-                           class="btn btn-lg btn-info">Pictorial Guide</a>
-                    </span>
-                    <!-----	Route for not supported ones	----->                 
-                	<span ng-show=" !(destination=='Dakota' && currentLocation=='Marsiling') && 
+                            <a type="button" ng-hide="!destination.length" href="application_briefInstruction_not_supported.html"
+                               class="btn btn-lg btn-info">Brief Instructions</a>
+                        </span>
+
+                       <!-- <span ng-show=" (destination=='' && currentLocation=='') ">
+                            <a type="button" href="application_pictorialGuide_not_supported.html"
+                               class="btn btn-lg btn-white">Brief Instructions</a>
+                        </span>-->
+
+                    </td>
+                    <td></td>
+                    <td style="width:10%; position:fixed; margin-left:20px; margin-top: 5px; ">
+                        <!-----	Route for Marsiling to Dakota	----->
+                        <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
+                            <a type="button" ng-hide="!destination.length" href="application_pictorialGuide.html"
+                               class="btn btn-lg btn-info">Pictorial Guide</a>
+                        </span>
+                        <!-----	Route for Boon Lay to One North	----->
+                        <span ng-show=" destination=='One North' &&  currentLocation=='Boon Lay' ">
+                            <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_Boon Lay.html"
+                               class="btn btn-lg btn-info">Pictorial Guide</a>
+                        </span>
+                        <!-----	Route for not supported ones	----->
+                        <span ng-show=" !(destination=='Dakota' && currentLocation=='Marsiling') &&
                     !(destination=='One North' && currentLocation=='Boon Lay')">
-                           <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_not_supported.html" 
-                           class="btn btn-lg btn-info">Pictorial Guide</a>
-                    </span>  
-                    
-                   <span ng-show=" (destination=='' && currentLocation=='') ">
-                           <a type="button" href="application_pictorialGuide_not_supported.html" 
-                           class="btn btn-lg btn-white">Pictorial Guide</a>
-                    </span>              	
-                </td>
-                
-                <td style="width:5%">
-                    <button class="btn btn-lg btn-danger" ng-click="reset = !reset">Reset</button>	
-                </td>
-            </tr>
-		</table>
+                            <a type="button" ng-hide="!destination.length" href="application_pictorialGuide_not_supported.html"
+                               class="btn btn-lg btn-info">Pictorial Guide</a>
+                        </span>
+<!-- 
+                        <span ng-show=" (destination=='' && currentLocation=='') ">
+                            <a type="button" href="application_pictorialGuide_not_supported.html"
+                               class="btn btn-lg btn-white">Pictorial Guide</a>
+                        </span>-->
+                    </td>
+                    <td>
+
+                    </td>
+                    <td style="width:5%; position: fixed; margin-top: 5px;">
+                        <button class="btn btn-lg btn-danger" ng-click="reset = !reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+            </div>
+        <br/>
+            
+
+            </br>
         <div ng-repeat='image in images'>
-            <img ng-src="{{image}}" style="z-index: 100; position: absolute; width: 60%; margin-left:15%; " />
+            <img ng-src="{{image}}" style="z-index: 100; position: absolute; width: 60%; margin-left:16%; margin-top: 2%; " />
         </div>
-        
-        </br>
-        
-        <span ng-show="currentLocation==''">
-            <h3>Please choose your current location from the list of stations below: </h3>	
-        </span>
-        
-        <span ng-show="(currentLocation!='') && (destination =='')">
-            <h3>Please choose your destination from the list of stations below: </h3>		
-        </span>
-        
-        <span ng-show="(currentLocation!='') && (destination !='')">
-            <h3>Please choose either Brief instructions or Pictorial Guide to proceed further </h3>		
-        </span>
+            <span ng-show="currentLocation==''">
+                <h3>Please choose your current location from the list of stations below: </h3>
+            </span>
 
-        </br>
-        </br>
-        
-        <table class="table table-bordered" style="width:100%">
+            <span ng-show="(currentLocation!='') && (destination =='')">
+                <h3>Please choose your destination from the list of stations below: </h3>
+            </span>
 
-              <tr>	<!-----	First Row	----->
-            	<td style="width:10%">East West Line</td>
-                <td style="width:10%">North South Line</td>
-                <td style="width:10%">North East Line</td>
-                <td style="width:10%">Circle Line</td>
-                <td style="width:10%">Downtown Line</td>
-                <td style="width:10%">LRT</td>
-                <td>MRT / LRT MAP</td>
-            </tr>
+            <span ng-show="(currentLocation!='') && (destination !='')">
+                <h3>Please choose either Brief instructions or Pictorial Guide to proceed further </h3>
+            </span>
 
-            <tr>	<!-----	Second Row	----->
-              <td>
-                  <button class="btn btn-lg btn-success" ng-click="boonLay = !boonLay">Boon Lay</button>
-                  <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>
-              </td>
-              
-              <td>
-                  <button class="btn btn-lg btn-danger" ng-click="marsiling = !marsiling">Marsiling</button>
-                  <div class="box on" ng-show="marsiling" ng-animate="'box'"></div>                  
-              </td>
-              
-              <td>
-                  <button class="btn btn-lg btn-custom">Boon Keng *</button>
-              </td>
-              
-              <td>
-                  <button class="btn btn-lg btn-warning">Bayfront *</button>
-                                   
-              </td>
-              
-              <td>
-                  <button class="btn btn-lg btn-primary" ng-click="bayfront = !bayfront">Bayfront</button>
-                  <div class="box on" ng-show="bayfront" ng-animate="'box'"></div>                  
-              </td>
-              <td></td>
-              <td rowspan="10"><a class="thumbnail"><img src="images/Full Map.jpg" ng-click="enlarge()" alt="logo" width="100%"></a>
-                  </td>
-            </tr>
-            
-            <tr>	<!-----	Third Row	----->
-            	<td>
-                	<button class="btn btn-lg btn-success" ng-click="chineseGarden = !chineseGarden">Chinese Garden</button>
-                  	<div class="box on" ng-show="chineseGarden" ng-animate="'box'"></div> 
-                </td>
-                <td>
-                    <button class="btn btn-lg btn-danger">Sembawang *</button>  
-                </td>
-                <td>
-                	<button class="btn btn-lg btn-custom">Farrer Park *</button>
-                </td>
-                <td>
-					<button class="btn btn-lg btn-warning" ng-click="dakota = !dakota">Dakota</button>
-                  	<div class="box on" ng-show="dakota" ng-animate="'box'"></div>  
-                </td>
-                <td>
-                	<button class="btn btn-lg btn-primary">Bugis *</button>
-                </td>
-                <td></td>
-            </tr>
-            
-			<tr>	<!-----	Fourth Row	----->
-            	<td>
-                	<button  class="btn btn-lg btn-success"ng-click="lakeside = !lakeside">Lakeside</button>
-                  	<div class="box on" ng-show="lakeside" ng-animate="'box'"></div>
-                </td>
-                <td>
-                	<button class="btn btn-lg btn-danger">Somerset *</button>
-                </td>
-                <td>
-                	<button class="btn btn-lg btn-custom">Kovan *</button>
-                </td>
-                <td>
-                	<button  class="btn btn-lg btn-warning"ng-click="oneNorth = !oneNorth">One North</button>
-                  	<div class="box on" ng-show="oneNorth" ng-animate="'box'"></div>
-                </td>
-                <td>
-                	<button class="btn btn-lg btn-primary">Chinatown *</button>
-                </td>
-                <td></td>
-            </tr>
-        
-            <tr>	<!-----	Fifth Row	----->
-            	<td>
-                	<button class="btn btn-lg btn-success" ng-click="tiongBahru = !tiongBahru">Tiong Bahru</button>
-                  	<div class="box on" ng-show="tiongBahru" ng-animate="'box'"></div> 
-                </td>
-                <td>
-                    <button class="btn btn-lg btn-danger">Yishun *</button>
-                </td>
-                <td>
-                	<button class="btn btn-lg btn-custom">Sengkang *</button>
-                </td>
-                <td>
-                	<button class="btn btn-lg btn-warning">Bayfront *</button>
-                </td>
-                <td>
-                	<button class="btn btn-lg btn-primary">Downtown *</button>
-                </td>
-                <td></td>
-            </tr>
+            </br>
+            </br>
 
-			<tr>
-            	<td>Anything Below is  </td>
-                <td>for testing:</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            <table class="table table-bordered" style="width:100%">
 
-<!--
-	<input type="text" ng-model="rootCurrent">
-    <input type="text" ng-model="rootDestination">
-    {{currentLocation}}
-    {{destination}}
--->
-                     
-            <tr>
-            	<td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>       
-            </tr>
-           
-			<tr>
-            	<td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>       
-            </tr> 
-            
-			<tr>
-            	<td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>       
-            </tr> 
-            
-			<tr>
-            	<td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>       
-            </tr> 
-            
-			<tr>
-            	<td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>       
-            </tr> 
-            
-        </table>
-            
-            
-    </body>
+                <tr>
+                    <!-----	First Row	----->
+                    <td style="width:10%">East West Line</td>
+                    <td style="width:10%">North South Line</td>
+                    <td style="width:10%">North East Line</td>
+                    <td style="width:10%">Circle Line</td>
+                    <td style="width:10%">Downtown Line</td>
+                    <td style="width:10%">LRT</td>
+                    <td>MRT / LRT MAP</td>
+                </tr>
+
+                <tr>
+                    <!-----	Second Row	----->
+                    <td>
+                        <button class="btn btn-lg btn-success" ng-click="boonLay = !boonLay">Boon Lay</button>
+                        <div class="box on" ng-show="boonLay" ng-animate="'box'"></div>
+                    </td>
+
+                    <td>
+                        <button class="btn btn-lg btn-danger" ng-click="marsiling = !marsiling">Marsiling</button>
+                        <div class="box on" ng-show="marsiling" ng-animate="'box'"></div>
+                    </td>
+
+                    <td>
+                        <button class="btn btn-lg btn-custom">Boon Keng *</button>
+                    </td>
+
+                    <td>
+                        <button class="btn btn-lg btn-warning">Bayfront *</button>
+
+                    </td>
+
+                    <td>
+                        <button class="btn btn-lg btn-primary" ng-click="bayfront = !bayfront">Bayfront</button>
+                        <div class="box on" ng-show="bayfront" ng-animate="'box'"></div>
+                    </td>
+                    <td></td>
+                    <td rowspan="10">
+                        <a class="thumbnail"><img src="images/Full Map.jpg" ng-click="enlarge()" alt="logo" width="100%"></a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <!-----	Third Row	----->
+                    <td>
+                        <button class="btn btn-lg btn-success" ng-click="chineseGarden = !chineseGarden">Chinese Garden</button>
+                        <div class="box on" ng-show="chineseGarden" ng-animate="'box'"></div>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-danger">Sembawang *</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-custom">Farrer Park *</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-warning" ng-click="dakota = !dakota">Dakota</button>
+                        <div class="box on" ng-show="dakota" ng-animate="'box'"></div>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-primary">Bugis *</button>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <!-----	Fourth Row	----->
+                    <td>
+                        <button class="btn btn-lg btn-success" ng-click="lakeside = !lakeside">Lakeside</button>
+                        <div class="box on" ng-show="lakeside" ng-animate="'box'"></div>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-danger">Somerset *</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-custom">Kovan *</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-warning" ng-click="oneNorth = !oneNorth">One North</button>
+                        <div class="box on" ng-show="oneNorth" ng-animate="'box'"></div>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-primary">Chinatown *</button>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <!-----	Fifth Row	----->
+                    <td>
+                        <button class="btn btn-lg btn-success" ng-click="tiongBahru = !tiongBahru">Tiong Bahru</button>
+                        <div class="box on" ng-show="tiongBahru" ng-animate="'box'"></div>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-danger">Yishun *</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-custom">Sengkang *</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-warning">Bayfront *</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-lg btn-primary">Downtown *</button>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Anything Below is  </td>
+                    <td>for testing:</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <!--
+                <input type="text" ng-model="rootCurrent">
+                <input type="text" ng-model="rootDestination">
+                {{currentLocation}}
+                {{destination}}
+            -->
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </table>
+
+
+</body>
 </html>
 
 <!--
