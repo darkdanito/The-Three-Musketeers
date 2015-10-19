@@ -1,10 +1,16 @@
 BUGS:
 
-	Current Location and Destination can be the same
-
+	Remove current location but pic / brief still appear
+	
 TO DO LIST:
 
-	Remake reset button into clicking the respective button to reset instead
 	Allow user to search the list of mrt trains
 	Need to implement brief instructions
 	Help / Guide for first time user
+	
+	Show X sign only when got user input
+	Shift the guiding sentence down abit
+	Sync the rest of the nav bar to theh rest of the page
+	Improve pic guide
+	Improve Brief inst
+	
