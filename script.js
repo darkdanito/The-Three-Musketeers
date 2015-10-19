@@ -10,7 +10,7 @@ app.controller('AppController', function ($scope)
 	$scope.counter = 0;
 	$scope.$watch('boonLay', function()
 	{	
-		if(!$scope.currentLocation.length && !$scope.destination.length)
+		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.boonLay ? '' : 'Boon Lay'; 
 			$scope.currentLocation = 'Boon Lay'; 
@@ -22,7 +22,7 @@ app.controller('AppController', function ($scope)
 	
 	$scope.$watch('lakeside', function()
 	{
-		if(!$scope.currentLocation.length && !$scope.destination.length)
+		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.lakeside ? '' : 'Lakeside'; 
 			$scope.currentLocation = 'Lakeside';
@@ -34,7 +34,7 @@ app.controller('AppController', function ($scope)
 	
 	$scope.$watch('chineseGarden', function()
 	{
-		if(!$scope.currentLocation.length && !$scope.destination.length)
+		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.chineseGarden ? '' : 'Chinese Garden'; 
 			$scope.currentLocation = 'Chinese Garden'; 
@@ -46,7 +46,7 @@ app.controller('AppController', function ($scope)
 	
 	$scope.$watch('marsiling', function()
 	{
-		if(!$scope.currentLocation.length && !$scope.destination.length)
+		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.marsiling ? '' : 'Marsiling'; 
 			$scope.currentLocation = 'Marsiling'; 
@@ -58,7 +58,7 @@ app.controller('AppController', function ($scope)
 	
 	$scope.$watch('dakota', function()
 	{
-		if(!$scope.currentLocation.length && !$scope.destination.length)
+		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.dakota ? '' : 'Dakota'; 
 			$scope.currentLocation = 'Dakota'; 
@@ -70,7 +70,7 @@ app.controller('AppController', function ($scope)
 	
 	$scope.$watch('tiongBahru', function()
 	{
-		if(!$scope.currentLocation.length && !$scope.destination.length)
+		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.tiongBahru ? '' : 'Tiong Bahru'; 
 			$scope.currentLocation = 'Tiong Bahru';
@@ -82,7 +82,7 @@ app.controller('AppController', function ($scope)
 	
 	$scope.$watch('oneNorth', function()
 	{
-		if(!$scope.currentLocation.length && !$scope.destination.length)
+		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.oneNorth ? '' : 'One North'; 
 			$scope.currentLocation = 'One North'; 
@@ -94,7 +94,7 @@ app.controller('AppController', function ($scope)
 	
 	$scope.$watch('bayfront', function()
 	{
-		if(!$scope.currentLocation.length && !$scope.destination.length)
+		if((!$scope.currentLocation.length && !$scope.destination.length) || (!$scope.currentLocation.length && $scope.destination.length))
 		{
 //			$scope.currentLocation = $scope.bayfront ? '' : 'Bayfront'; 
 			$scope.currentLocation = 'Bayfront';

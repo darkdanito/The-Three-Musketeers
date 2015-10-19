@@ -36,6 +36,10 @@
                     </span>
                 </td>
                 <td style="width:18%">{{currentLocation}}</td>
+                
+                <td style="width:4%"><a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent";">
+                <i class="glyphicon glyphicon-remove"></i>
+		        </a>                
 <!--
 				<td style="width:18%" ng-hide="currentLocation == ''">{{currentLocation}}</td>
 				
@@ -59,6 +63,10 @@
                     </span>              
                 </td>
                 <td style="width:18%">{{destination}}</td>
+                
+                <td style="width:4%"><a class="btn btn-primary" ng-click="resetDestination = !resetDestination";">
+			    <i class="glyphicon glyphicon-remove"></i>
+		        </a>
 <!--
 				<td style="width:18%" ng-hide="destination == ''">{{destination}}</td>
 				<td style="width:18%" ng-hide="destination != '' || currentLocation ==''"><highlight></highlight></td> 
@@ -67,7 +75,7 @@
 		        </a>
 -->                
                 </td>                 
-                <td style="width:12%">
+                <td style="width:10%">
 <!--                	
                     <a type="button" ng-hide="!destination.length" href="application_briefInstruction.html" 
                     class="btn btn-lg btn-info">Brief Instructions</a>
@@ -92,7 +100,7 @@
                     
                 </td>  
                              	
-                <td style="width:12%">        	
+                <td style="width:10%">        	
                     <!-----	Route for Marsiling to Dakota	----->
                     <span ng-show=" destination=='Dakota' &&  currentLocation=='Marsiling' ">
                            <a type="button" ng-hide="!destination.length" href="application_pictorialGuide.html" 
