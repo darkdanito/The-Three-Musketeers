@@ -196,8 +196,10 @@ app.controller('AppController', function ($scope)
 	    $scope.counter += 1;
 	    if ($scope.counter == 1) {
 	        $scope.images = ['images/Full Map.jpg'];
+	        $scope.close = 'glyphicon glyphicon-remove thumbnail';
 	    } else {
 	        $scope.images = [''];
+	        $scope.close = '';
 	        $scope.counter = 0;
 	    }
 	    

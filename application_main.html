@@ -157,10 +157,13 @@
             </br>
         <div ng-repeat='image in images'>
             <img ng-src="{{image}}" style="z-index: 100; position: absolute; width: 60%; margin-left:16%; margin-top: 2%; " />
+            
         </div>
+        <span class="{{close}}" style="z-index:150; position:absolute; margin-left:75%; margin-top: 4%;" ng-click="enlarge()"></span>
             <span ng-show="currentLocation==''">
-                <h3>Please choose your current location from the list of stations below: </h3>
+                <h3>Please choose your current location from the list of stations below: </h3> 
             </span>
+
 
             <span ng-show="(currentLocation!='') && (destination =='')">
                 <h3>Please choose your destination from the list of stations below: </h3>
@@ -214,6 +217,7 @@
                     <td></td>
                     <td rowspan="10">
                         <a class="thumbnail"><img src="images/Full Map.jpg" ng-click="enlarge()" alt="logo" width="100%"></a>
+                        
                     </td>
                 </tr>
 
