@@ -7,8 +7,7 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
     	<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-        <script type="text/javascript" src="js/dropdown.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/carousel.js"></script>
         
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +19,7 @@
 
     <body ng-app="my-app" ng-controller="AppController">
 
+	<div class="navbar navbar-fixed-top">
 		<table style="width:100%">
             <tr>  
                 <td style="width:1%">
@@ -29,30 +29,50 @@
                 <td style="width:10%">
                 	<button class="btn btn-lg btn-white">Current Location: </button>
                 </td>
-				<td style="width:18%">Boon Lay</td>
+				<td style="width:13%">Boon Lay</td>
+				<td style="width:1%">
+					<a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent">
+						<i class="glyphicon glyphicon-remove"></i>
+					</a>
+				</td>     
+                
                 <td style="width:10%">
                 	<button class="btn btn-lg btn-white">Destination: </button>
                 </td>
-                <td style="width:18%">One North</td>
-                <td style="width:12%">
+                <td style="width:13%">One North</td>
+                
+				<td style="width:1%">
+					<a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent">
+						<i class="glyphicon glyphicon-remove"></i>
+					</a>
+				</td>                  
+                
+                <td style="width:10%">
                 	<a type="button" href="application_briefInstruction_Boon Lay.html" 
                     class="btn btn-lg btn-info">Brief Instructions</a>
                 </td>  
                              	
-                <td style="width:12%">        	
+                <td style="width:10%">        	
                     <!-----	Route for Boon Lay to One North	----->
-                           <a type="button" href="application_pictorialGuide_Boon Lay.html" 
-                           class="btn btn-lg btn-info">Pictorial Guide</a>       	
+					<a type="button" href="application_pictorialGuide_Boon Lay.html" 
+					class="btn btn-lg btn-info">Pictorial Guide</a>       	
                 </td>
                 
                 <td style="width:5%">
                     <button class="btn btn-lg btn-danger" ng-click="reset = !reset">Reset</button>	
                 </td>
             </tr>
-		</table>
+		</table>    
+    </div>
+
+	</br>
+    </br>
+    </br>
         
-		<h3>Pictorial Guide: Boon Lay to One North {{darkdanito}}</h3>
-            
+		<h3>Pictorial Guide: <green>Boon Lay</green> to <orange>One North<orange></h3>
+        
+	</br>
+    </br>            
 	<!-- Carousel
 	================================================== -->
     <div id="myCarousel" class="carousel" data-ride="carousel" data-interval="false">
@@ -96,7 +116,7 @@
                         
                         <tr>  
                             <td>Current Location</td>
-                            <td>Board the train at <green>Line 1</green> when it arrives</td>
+                            <td>Board the train heading towards <green>to Pasir Ris (1)</green> when it arrives</td>
                             <td>Alight at <green>Buona Vista (EW21)</green> <b>6</b> stops later</td>
                         </tr>
                     </table>
@@ -129,7 +149,7 @@
                         <td>Proceed from the <green>East West Line</green> to the <orange>Circle Line</orange> by 
                         following the signs located in the station</td>
                         <td>Reach <orange>Buona Vista (CC22)</orange></td>
-                        <td>Board the train at <orange>Line 9</orange> when it arrives</td>
+                        <td>Board the train heading towards <orange>to Harbour Front (9)</orange> when it arrives</td>
                     </tr>
                 </table>
 				
@@ -184,13 +204,13 @@
 		<table style="width:100%">
             <tr bgcolor="#00FF00">  
                 <td>
-                	S
+                	:
                 </td>
             </tr>
             
             <tr bgcolor="#00FF00">  
                 <td>
-                	S
+                	:
                 </td>
             </tr>
 		</table>

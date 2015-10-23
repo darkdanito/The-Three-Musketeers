@@ -7,7 +7,7 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
     	<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/dropdown.js"></script>
         <script type="text/javascript" src="js/carousel.js"></script>
         
@@ -20,39 +20,60 @@
 
     <body ng-app="my-app" ng-controller="AppController">
 
-		<table style="width:100%">
-            <tr>  
-                <td style="width:1%">
-                	<a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a>
-                </td>
-                <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
-                <td style="width:10%">
-                	<button class="btn btn-lg btn-white">Current Location: </button>
-                </td>
-				<td style="width:18%">Marsiling</td>
-                <td style="width:10%">
-                	<button class="btn btn-lg btn-white">Destination: </button>
-                </td>
-                <td style="width:18%">Dakota</td>
-                <td style="width:12%">
+        <div class="navbar navbar-fixed-top">
+            <table style="width:100%">
+                <tr>  
+                    <td style="width:1%">
+                        <a type="button" href="application_main.html" class="btn btn-lg glyphicon glyphicon-home"></a>
+                    </td>
+                    <td style="width:10%"><a class="navbar-brand" href="application_main.html">T-Planner</a></td>
+                    <td style="width:10%">
+                        <button class="btn btn-lg btn-white">Current Location: </button>
+                    </td>
+                    <td style="width:13%">Marsiling</td>
+                    <td style="width:1%">
+                        <a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                    </td>     
+                    
+                    <td style="width:10%">
+                        <button class="btn btn-lg btn-white">Destination: </button>
+                    </td>
+                    <td style="width:13%">Dakota</td>
+                    
+                    <td style="width:1%">
+                        <a class="btn btn-primary" ng-click="resetCurrent = !resetCurrent">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                    </td>                  
+                    
+                    <td style="width:10%">
                 	<a type="button" href="application_briefInstruction.html" 
                     class="btn btn-lg btn-info">Brief Instructions</a>
-                </td>  
-                             	
-                <td style="width:12%">        	
+                    </td>  
+                                    
+                    <td style="width:10%">        	
                     <!-----	Route for Marsiling to Dakota	----->
                            <a type="button" href="application_pictorialGuide.html" 
-                           class="btn btn-lg btn-info">Pictorial Guide</a>
-                </td>
-                
-                <td style="width:5%">
-                    <button class="btn btn-lg btn-danger" ng-click="reset = !reset">Reset</button>	
-                </td>
-            </tr>
-		</table>
+                           class="btn btn-lg btn-info">Pictorial Guide</a>      	
+                    </td>
+                    
+                    <td style="width:5%">
+                        <button class="btn btn-lg btn-danger" ng-click="reset = !reset">Reset</button>	
+                    </td>
+                </tr>
+            </table>    
+        </div>
+    
+        </br>
+        </br>
+        </br>
         
 		<h3>Brief Instructions: Marsiling to Dakota</h3>
-            
+        
+        </br>
+        </br>            
 		<img src="images/brief_instruction_marsiling.jpg" height="70%" width="70%"alt="Logo">
 
     </body>
