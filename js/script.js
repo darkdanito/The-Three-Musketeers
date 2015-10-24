@@ -4,7 +4,7 @@ var app = angular.module('my-app', [], function ()
 
 var monthDays = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-var zoo1 = [1,8,15,22,29];
+var zoo1 = ["a",8,15,22,29];
 var zoo2 = [2,9,16,23,30];
 var zoo3 = [3,10,17,24,31];
 var zoo4 = [4,11,18,25,0];
@@ -59,17 +59,21 @@ app.directive('calendar', function() {
 		+ '<tr ng-repeat="weekk in weeks1">'
 //		+ '<td><button class="btn btn-lg btn-success">{{weeks1[$index]}}</button></td>'
 //		+ '<td><button class="btn btn-lg btn-success" ng-click="data.tes = 1">{{weeks1[$index]}}</button></td>'
-		+ '<td><button class="btn btn-lg btn-success" ng-click="data.tes = weeks1[$index]">{{weeks1[$index]}}</button></td>'
+		+ '<td><button class="btn btn-lg btn-success" ng-click="doSomething(weeks1[$index])">{{weeks1[$index]}}</button></td>'
 		
 //		<button class="phoneNumber" ng-click="data.tes = 1">1</button>
 
 		+ '</td>'
+
+//		+ '<td><button class="btn btn-lg btn-danger" ng-click="data.tes = weeks2[$index]">{{weeks2[$index]}}</button></td>'
 		
-		+ '<td><button class="btn btn-lg btn-danger" ng-click="data.tes = weeks2[$index]">{{weeks2[$index]}}</button></td>'
-		+ '<td><button class="btn btn-lg btn-custom" ng-click="data.tes = weeks3[$index]">{{weeks3[$index]}}</button></td>'
-		+ '<td><button class="btn btn-lg btn-warning" ng-click="data.tes = weeks4[$index]">{{weeks4[$index]}}</button></td>'
-		+ '<td><button class="btn btn-lg btn-primary" ng-click="data.tes = weeks5[$index]">{{weeks5[$index]}}</button></td>'
-		+ '<td><button class="btn btn-lg btn-grey" ng-click="data.tes = weeks6[$index]">{{weeks6[$index]}}</button></td>'
+//		<a ng-click="doSomething({{value}})" >		
+		
+		+ '<td><button class="btn btn-lg btn-danger" ng-click="doSomething(weeks2[$index])">{{weeks2[$index]}}</button></td>'
+		+ '<td><button class="btn btn-lg btn-custom" ng-click="doSomething(weeks3[$index])">{{weeks3[$index]}}</button></td>'
+		+ '<td><button class="btn btn-lg btn-warning" ng-click="doSomething(weeks4[$index])">{{weeks4[$index]}}</button></td>'
+		+ '<td><button class="btn btn-lg btn-primary" ng-click="doSomething(weeks5[$index])">{{weeks5[$index]}}</button></td>'
+		+ '<td><button class="btn btn-lg btn-grey" ng-click="doSomething(weeks6[$index])">{{weeks6[$index]}}</button></td>'
 
 		+ '</tr>'
 		+'</tbody></table>',
@@ -164,7 +168,8 @@ app.directive('calendar', function() {
 
 app.controller('AppController', function ($scope) 
 {
-/*	$scope.$watch('reset', function()
+/*	
+	$scope.$watch('reset', function()
 	{
 		$scope.currentLocation = '';
 		$scope.destination = '';
@@ -176,5 +181,55 @@ app.controller('AppController', function ($scope)
 	$scope.currentLocation = '';
 	$scope.destination = '';
 	
-    
+//	"doSomething(weeks2[$index])
+
+	$scope.doSomething = function(name) 
+	{
+//         $scope.destination = name;
+		 
+		if((!$scope.currentLocation.length && !$scope.destination.length) || 
+			(!$scope.currentLocation.length && $scope.destination.length))
+		{
+			$scope.currentLocation = name;
+			
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			 
+		}else
+		{
+			$scope.destination = name;
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}			
+		}
+    }
+	
+	
+	
+	
+/*		
+	$scope.$watch('boonLay', function()
+	{	
+		if((!$scope.currentLocation.length && !$scope.destination.length) || 
+			(!$scope.currentLocation.length && $scope.destination.length))
+		{
+			$scope.currentLocation = 'Boon Lay';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.currentLocation = '';
+			} 			 
+		}else
+		{
+			$scope.destination = 'Boon Lay';
+			if ($scope.currentLocation == $scope.destination)
+			{
+				$scope.destination = '';
+			}			
+		}
+    })
+*/
+
+
 })
